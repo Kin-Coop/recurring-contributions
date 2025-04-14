@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<extension key="kincopy" type="module">
+  <file>kincopy</file>
+  <name>kin copy</name>
+  <description>Example code to illustrate how to create a custom Api4 entity.</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Coleman Watts</author>
+    <email>coleman@civicrm.org</email>
+  </maintainer>
+  <urls>
+    <url desc="Extension Repo">https://lab.civicrm.org/extensions/api4example</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2021-07-04</releaseDate>
+  <version>1.1</version>
+  <develStage>stable</develStage>
+  <compatibility>
+    <ver>5.40</ver>
+  </compatibility>
+  <comments>Try enabling this and looking up the Example entity in the Api Explorer.</comments>
+  <civix>
+    <namespace>CRM/Kincopy</namespace>
+  </civix>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi" />
+  </classloader>
+</extension>

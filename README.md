@@ -1,23 +1,9 @@
-# CiviCRM Api4 Example
+# CiviCRM Offline Recurring Contributions
 
-#### Code examples to supplement the [APIv4 Architecture](https://docs.civicrm.org/dev/en/latest/api/v4/architecture/) documentation.
+#### This extension is about automatically creating contributions on a monthly (and then possibly weekly) basis.
 
-This extension declares an APIv4 entity named `Example`. It is a simple but fully-functional api which reads & writes test data from a json file.
+It works by setting up an API4 endpoint that is triggered by a scheduled task that runs on a daily basis and duplicates any contributions it finds exactly one month ago for that day that are marked as recurring. So any contributions it finds a month ago it will then recreate for the current date.
 
-The thoroughly commented code demonstrates how to create your own api for any arbitrary data source,
-with examples and documentation for implementing all the standard actions.
+It should also then trigger an email which goes to the contributor telling them about the contribution required.
 
-It also shows how your extension can add new actions to existing entities.
-
-To get started:
-
-  - Install this extension.
-  - Visit the Api4 Explorer.
-  - Select the `Example` entity.
-  - Read the help text and try out the various actions (they really work!).
-
-![Screenshot](Screenshot.png)
-
------
-
-This extension licensed under [AGPL-3.0](LICENSE.txt).
+It involves a couple of custom fields for contributions including the recurring frequency field and a link to a household field for the contribution.

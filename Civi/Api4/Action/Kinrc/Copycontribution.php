@@ -148,7 +148,7 @@ class Copycontribution extends \Civi\Api4\Generic\AbstractAction {
         }
     }
     
-    $recurringContributions =
+    //$recurringContributions =
 
       //return $newContribution;
 
